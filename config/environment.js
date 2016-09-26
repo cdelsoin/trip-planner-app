@@ -2,7 +2,8 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ga-wdi-boston.ember-auth',
+    apiHost: 'http://localhost:3000',
+    modulePrefix: 'trip-planner-api',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
