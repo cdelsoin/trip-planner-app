@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import ActiveModelAdapter from 'active-model-adapter';
-import ENV from 'trip-planner-api/config/environment';
+import ENV from 'trip-planner-app/config/environment';
 
 export default ActiveModelAdapter.extend({
   host: ENV.apiHost,

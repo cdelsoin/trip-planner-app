@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
-import ENV from 'trip-planner-api/config/environment';
+import ENV from 'trip-planner-app/config/environment';
 
 export default AjaxService.extend({
   host: ENV.apiHost,

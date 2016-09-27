@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import TextFieldInitializer from 'trip-planner-api/initializers/text-field';
+import TextFieldInitializer from 'trip-planner-app/initializers/text-field';
 import { module, test } from 'qunit';
 
 let application;

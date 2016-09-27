@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     apiHost: 'http://localhost:3000',
-    modulePrefix: 'trip-planner-api',
+    modulePrefix: 'trip-planner-app',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
