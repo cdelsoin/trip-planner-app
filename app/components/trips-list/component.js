@@ -5,5 +5,9 @@ export default Ember.Component.extend({
     togglePlanImportant (plan) {
       return this.sendAction('togglePlanImportant', plan);
     },
+
+    togglePlanStrict (plan) {
+      return this.sendAction('togglePlanStrict', plan);
+    },
   },
 });

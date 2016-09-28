@@ -3,7 +3,8 @@
 <h4 class="trip-subheader">{{trip.more_info}}</h4>
 <ul>
   {{#each trip.plans as |plan|}}
-    {{trips-list/plan plan=plan toggleImportant='togglePlanImportant'}}
+    {{trips-list/plan plan=plan toggleImportant='togglePlanImportant'
+                                toggleStrict='togglePlanStrict'}}
   {{/each}}
 </ul>
 

@@ -10,5 +10,10 @@ export default Ember.Route.extend({
       plan.toggleProperty('important');
       plan.save();
     },
+
+    togglePlanStrict (plan) {
+      plan.toggleProperty('strict_time');
+      plan.save();
+    },
   },
 });
