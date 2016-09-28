@@ -4,7 +4,8 @@
 <ul>
   {{#each trip.plans as |plan|}}
     {{trips-list/plan plan=plan toggleImportant='togglePlanImportant'
-                                toggleStrict='togglePlanStrict'}}
+                                toggleStrict='togglePlanStrict'
+                                delete='deletePlan'}}
   {{/each}}
 </ul>
 

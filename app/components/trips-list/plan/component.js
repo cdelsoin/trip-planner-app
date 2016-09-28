@@ -14,5 +14,8 @@ export default Ember.Component.extend({
       return this.sendAction('toggleStrict', this.get('plan'));
     },
 
+    delete () {
+      this.sendAction('delete', this.get('plan'));
+    },
   },
 });

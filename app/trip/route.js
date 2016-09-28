@@ -15,5 +15,10 @@ export default Ember.Route.extend({
       plan.toggleProperty('strict_time');
       plan.save();
     },
+
+
+    deletePlan (plan) {
+      return plan.destroyRecord();
+    },
   },
 });
