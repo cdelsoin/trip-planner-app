@@ -1,5 +1,6 @@
 <span class="trip-plan">
-  <div style="border: 1px dashed red" {{action 'toggleImportant'}}>
+  <div >
+  {{!-- <div style="border: 1px dashed black"> --}}
 
 
     <ul>
@@ -8,6 +9,7 @@
       <li>{{plan.location}}</li>
       <li>{{plan.date}}</li>
       <li>{{plan.time}}</li>
+      <li {{action 'toggleImportant'}}>is this is a must do? {{plan.important}}</li>
     </ul>
   </div>
 </span>
