@@ -41,7 +41,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = '/';
+    ENV.locationType = 'hash';
+    ENV.apiHost = 'https://trip-planner-api.herokuapp.com';
   }
 
   return ENV;

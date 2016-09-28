@@ -12,7 +12,6 @@ Router.map(function () {
   this.route('users');
   this.route('trips');
   this.route('trip', { path: 'trips/:trip_id' });
-  this.route('plans');
 });
 
 export default Router;

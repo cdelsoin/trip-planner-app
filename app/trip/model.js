@@ -5,5 +5,6 @@ export default DS.Model.extend({
   start_date: DS.attr('date'),
   end_date: DS.attr('date'),
   who: DS.attr('string'),
-  // plans: DS.hasMany('plan'),
+  more_info: DS.attr('string'),
+  plans: DS.hasMany('plan'),
 });

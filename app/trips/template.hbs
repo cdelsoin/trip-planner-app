@@ -1,4 +1,9 @@
-<h2>Trips</h2>
+{{#each model as |trip|}}
+  {{trips-list/card trip=trip}}
+{{/each}}
+
+{{#link-to 'application'}}Back{{/link-to}}
+{{!-- <h2>Trips</h2>
 
 <ul>
 {{#each model as |trip|}}
@@ -12,4 +17,4 @@
   </ul>
 
 {{/each}}
-</ul>
+</ul> --}}
