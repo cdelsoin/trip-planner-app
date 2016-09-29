@@ -36,5 +36,8 @@ export default Ember.Component.extend({
       return this.sendAction('deletePlan', plan);
     },
 
+    reset () {
+      this.set('newPlan', {});
+    },
   },
 });
