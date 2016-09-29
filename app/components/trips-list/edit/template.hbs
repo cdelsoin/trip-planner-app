@@ -1,5 +1,27 @@
-<form {{action 'save' on='submit' }}>
-  {{input placeholder='Trip Location'
+{{!-- <form {{action 'save' on='submit' }}> --}}
+<form>
+  {{input placeholder='Destination'
           class='input-group form-control'
           value=trip.location}}
+
+  {{input placeholder='When will you arrive?'
+          class='input-group form-control'
+          value=trip.start_date
+          type='date'}}
+
+  {{input placeholder='When will you leave?'
+          class='input-group form-control'
+          value=trip.end_date
+          type='date'}}
+
+  {{input placeholder='Who is going?'
+          class='input-group form-control'
+          value=trip.who}}
+
+  {{textarea placeholder="More info?"
+          class="input-group form-control"
+          value=trip.more_info}}
+
+  <button type="submit" class="btn btn-primary" {{action "save"}}>Create Plan</button>
+
 </form>
