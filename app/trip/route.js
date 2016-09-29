@@ -16,6 +16,10 @@ export default Ember.Route.extend({
       plan.save();
     },
 
+    createPlan (data) {
+      let plan = this.get('store').createRecord('plan', data);
+      return plan.save();
+    },
 
     deletePlan (plan) {
       return plan.destroyRecord();

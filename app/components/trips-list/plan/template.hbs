@@ -9,8 +9,8 @@
       <li>{{plan.location}}</li>
       <li>{{plan.date}}</li>
       <li>{{plan.time}}</li>
-      <li {{action 'toggleStrict'}}>is there a strict start time? {{plan.strict_time}}</li>
-      <li {{action 'toggleImportant'}}>is this is a must do? {{plan.important}}</li>
+      <li {{action 'toggleStrict'}}>time sensitive? {{plan.strict_time}}</li>
+      <li {{action 'toggleImportant'}}>must do? {{plan.important}}</li>
       <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete</button>
     </ul>
   </div>

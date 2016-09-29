@@ -9,4 +9,40 @@
   {{/each}}
 </ul>
 
+<br>
+
+<form>
+  {{input placeholder="Who's going? (ex \"Jim, Sally, Gunther\" or \"All\")"
+          class="input-group form-control"
+          value=newPlan.who}}
+
+  {{input placeholder="What are you doing?"
+          class="input-group form-control"
+          value=newPlan.what}}
+
+  {{input placeholder="Where?"
+          class="input-group form-control"
+          value=newPlan.location}}
+
+  {{textarea placeholder="More info?"
+          class="input-group form-control"
+          value=newPlan.more_details}}
+
+  {{input placeholder="yyyy-mm-dd"
+          class="input-group form-control"
+          value=newPlan.date
+          type="date"}}
+
+  {{input placeholder="yyyy-mm-dd"
+          class="input-group form-control"
+          value=newPlan.time
+          type="time"}}
+
+  <button type="submit" class="btn btn-primary" {{action "createPlan"}}>Create Plan</button>
+  <button class="btn btn-default" {{action "reset"}}>Cancel</button>
+
+</form>
+
+<br>
+
 {{#link-to 'trips'}}Back{{/link-to}}
