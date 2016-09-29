@@ -24,5 +24,10 @@ export default Ember.Route.extend({
     deletePlan (plan) {
       return plan.destroyRecord();
     },
+
+    saveTrip(trip) {
+      trip.save()
+      .then(()=>this.transitionTo('trips'));
+    },
   },
 });

@@ -7,7 +7,11 @@ export default Ember.Route.extend({
 
   actions: {
     editTrip (trip) {
-      this.transitionTo('trip/edit', trip);
+      this.transitionTo('trip.edit', trip);
     },
+
+    // editTrip (trip) {
+    //   this.transitionTo('trip.edit', trip);
+    // },
   },
 });

@@ -11,8 +11,11 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('trips');
-  this.route('trip', { path: 'trips/:trip_id' });
-  this.route('trip/edit', { path: 'trips/:trip_id/edit' });
+  // this.route('trip', { path: 'trips/:trip_id' });
+
+  this.route('trip', { path: 'trips/:trip_id' }, function () {
+    this.route('edit');
+  });
 });
 
 export default Router;
