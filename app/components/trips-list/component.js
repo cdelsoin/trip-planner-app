@@ -23,8 +23,6 @@ export default Ember.Component.extend({
     createPlan () {
       let data = this.get('newPlan');
       data.trip = this.get('trip');
-      // data.plan = this.get('plan');
-      // console.log('data', data, 'data trip', data.trip, 'data pan', data.plan);
       this.sendAction('createPlan', data);
       this.set('newPlan.who', null);
       this.set('newPlan.what', null);

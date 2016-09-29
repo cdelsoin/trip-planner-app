@@ -1,20 +1,5 @@
 {{#each model as |trip|}}
-  {{trips-list/card trip=trip}}
+  {{trips-list/card trip=trip edit='editTrip'}}
 {{/each}}
 
 {{#link-to 'application'}}Back{{/link-to}}
-{{!-- <h2>Trips</h2>
-
-<ul>
-{{#each model as |trip|}}
-{{#link-to 'trip' trip}}
-<h3>{{trip.location}}</h3>
-{{/link-to}}
-  <ul>
-    <li>{{trip.start_date}}</li>
-    <li>{{trip.end_date}}</li>
-    <li>{{trip.who}}</li>
-  </ul>
-
-{{/each}}
-</ul> --}}
