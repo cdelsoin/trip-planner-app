@@ -19,3 +19,7 @@ Rails
 Javascript
 HTML
 CSS
+
+Wireframes
+http://imgur.com/a/6yzF7
+http://imgur.com/a/hZAUx
