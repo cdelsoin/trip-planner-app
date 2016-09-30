@@ -29,5 +29,10 @@ export default Ember.Route.extend({
       trip.save()
       .then(()=>this.transitionTo('trips'));
     },
+
+    cancelSaveTrip(trip) {
+      trip.rollbackAttributes();
+      this.transitionTo('trips');
+    },
   },
 });
