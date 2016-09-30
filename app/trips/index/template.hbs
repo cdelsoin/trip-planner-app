@@ -1,7 +1,8 @@
+{{#link-to 'trips.new' class="btn btn-success" }}
+New Trip
+{{/link-to}}
+<br>
+<br>
 {{#each model as |trip|}}
   {{trips-list/card trip=trip edit='editTrip' delete='deleteTrip'}}
 {{/each}}
-<br>
-{{#link-to 'trips.new' class="btn btn-xs btn-success" }}
-  New Trip
-{{/link-to}}

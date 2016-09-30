@@ -5,5 +5,9 @@ export default Ember.Component.extend({
     edit () {
       this.sendAction('edit', this.get('trip'));
     },
+
+    delete () {
+      this.sendAction('delete', this.get('trip'));
+    },
   },
 });
