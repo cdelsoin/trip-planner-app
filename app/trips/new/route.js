@@ -11,7 +11,8 @@ export default Ember.Route.extend({
       .then(()=>this.transitionTo('trips'));
     },
 
-    cancelCreateList(trip) {
+    cancelCreateTrip(trip) {
+      console.log(trip);
       trip.rollbackAttributes();
       this.transitionTo('trips');
     },

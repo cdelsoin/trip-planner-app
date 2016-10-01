@@ -7,7 +7,7 @@ export default Ember.Component.extend({
     },
 
     cancel () {
-      this.sendAction('cancel', this.get('list'));
+      this.sendAction('cancel', this.get('trip'));
     },
   },
 });
