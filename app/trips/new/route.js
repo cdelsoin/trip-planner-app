@@ -7,8 +7,7 @@ export default Ember.Route.extend({
 
   actions: {
     createTrip(data) {
-      let trip = this.get('store').createRecord('trip', data);
-      trip.save()
+      data.trip.save()
       .then(()=>this.transitionTo('trips'));
     },
 

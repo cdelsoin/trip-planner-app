@@ -20,6 +20,7 @@ export default Ember.Component.extend({
       this.set('newTrip.end_date', null);
       this.set('newTrip.who', null);
       this.set('newTrip.more_info', null);
+      this.set('newTrip', {});
     },
 
     cancel () {
