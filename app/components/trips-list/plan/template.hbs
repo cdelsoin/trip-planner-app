@@ -10,8 +10,8 @@
       <li>{{plan.date}}</li>
       <li>{{plan.time}}</li>
       <li>{{plan.more_details}}</li>
-      <li {{action 'toggleStrict'}}>time sensitive? {{plan.strict_time}}</li>
-      <li {{action 'toggleImportant'}}>must do? {{plan.important}}</li>
+      <li {{action 'toggleStrict'}}>time sensitive? {{plan.strict_time}}</li> {{!-- TODO create a button and move plan.strict_time into the action--}}
+      <li {{action 'toggleImportant'}}>must do? {{plan.important}}</li> {{!-- TODO create a button and move plan.important into the action--}}
       <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete</button>
     </ul>
   </div>
