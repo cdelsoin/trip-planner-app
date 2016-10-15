@@ -5,9 +5,7 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        {{!-- <li>{{#link-to "users"}}Users{{/link-to}}</li> --}}
         <li>{{#link-to "trips"}}Trips{{/link-to}}</li>
-        {{!-- <li>{{#link-to "plans"}}Plans{{/link-to}}</li> --}}
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -23,8 +21,10 @@
   </div>
 </nav>
 
+
+
 <div class="app-title">
-<h1>Trip Planner App!</h1>
+  <h1>For Travellers</h1>
 </div>
 
 {{#each flashMessages.queue as |flash|}}

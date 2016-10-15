@@ -1,12 +1,16 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 @import 'plans';
+@import 'trips';
 
 .app-title {
   text-align: center;
 }
 
-.trip-create {
-  font-size: 30px;
-  text-align: center;
+body {
+  background-attachment: fixed;
+  // background-image: url('http://i.imgur.com/LhNbtak.jpg');
+  background-image: url('http://i.imgur.com/46lkfaP.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
