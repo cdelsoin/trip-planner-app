@@ -3,9 +3,9 @@
 @import 'plans';
 @import 'trips';
 
-.app-title {
-  text-align: center;
-}
+// FONTS AVAILABLE //
+// font-family: 'Homemade Apple', cursive;
+// font-family: 'Raleway', sans-serif;
 
 body {
   background-attachment: fixed;
@@ -13,4 +13,29 @@ body {
   background-image: url('http://i.imgur.com/46lkfaP.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Raleway', sans-serif;
+}
+
+// body {
+//   // background-color: rgba(0, 0, 0, 0.15);
+//   // height: 100vh;
+// }
+
+.app-title {
+  font-family: 'Homemade Apple', cursive;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 90px;
+}
+
+.main {
+  // background-color: rgba(0, 0, 0, 0.15);
+}
+
+nav {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
 }

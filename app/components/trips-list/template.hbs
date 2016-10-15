@@ -1,6 +1,9 @@
-<h3 class="trip-header">{{trip.location}}</h3>
-<h4>{{trip.who}}</h4>
-<h4 class="trip-subheader">{{trip.more_info}}</h4>
+<div class="trip-header">
+  <h3 >{{trip.location}}</h3>
+  <h4 >{{trip.who}}</h4>
+  <h4 >{{trip.more_info}}</h4>
+</div>
+
 <ul>
   {{#each trip.plans as |plan|}}
     {{trips-list/plan plan=plan toggleImportant='togglePlanImportant'
@@ -11,38 +14,41 @@
 
 <br>
 
-<form>
-  {{input placeholder="Who's going? (ex \"Jim, Sally, Gunther\" or \"All\")"
-          class="input-group form-control"
-          value=newPlan.who}}
+<div class="col-md-8 col-md-offset-2">
 
-  {{input placeholder="What are you doing?"
-          class="input-group form-control"
-          value=newPlan.what}}
+  <form>
+    {{input placeholder="Who's going? (ex \"Jim, Sally, Gunther\" or \"All\")"
+    class="input-group form-control"
+    value=newPlan.who}}
 
-  {{input placeholder="Where?"
-          class="input-group form-control"
-          value=newPlan.location}}
+    {{input placeholder="What are you doing?"
+    class="input-group form-control"
+    value=newPlan.what}}
 
-  {{textarea placeholder="More info?"
-          class="input-group form-control"
-          value=newPlan.more_details}}
+    {{input placeholder="Where?"
+    class="input-group form-control"
+    value=newPlan.location}}
 
-  {{input placeholder="Date"
-          class="input-group form-control"
-          value=newPlan.date
-          type="date"}}
+    {{textarea placeholder="More info?"
+    class="input-group form-control"
+    value=newPlan.more_details}}
 
-  {{input placeholder="Time"
-          class="input-group form-control"
-          value=newPlan.time
-          type="time"}}
+    {{input placeholder="Date"
+    class="input-group form-control"
+    value=newPlan.date
+    type="date"}}
 
-  <button type="submit" class="btn btn-primary" {{action "createPlan"}}>Create Plan</button>
-  <button class="btn btn-default" {{action "reset"}}>Cancel</button>
+    {{input placeholder="Time"
+    class="input-group form-control"
+    value=newPlan.time
+    type="time"}}
 
-</form>
+    <button type="submit" class="btn btn-primary" {{action "createPlan"}}>Create Plan</button>
+    <button class="btn btn-default" {{action "reset"}}>Cancel</button>
+
+  </form>
 
 <br>
 
 {{#link-to 'trips'}}Back{{/link-to}}
+</div>
