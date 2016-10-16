@@ -1,48 +1,61 @@
-<h3 class="trip-header">{{trip.location}}</h3>
-<h4>{{trip.who}}</h4>
-<h4 class="trip-subheader">{{trip.more_info}}</h4>
-<ul>
+<div class="col-md-5 trip-header-mobile">
+  <h2 >{{trip.location}}</h2>
+  <h3 >{{trip.who}}</h3>
+  <h3 >{{trip.more_info}}</h3>
+</div>
+
+<div class="plans-list col-md-7">
   {{#each trip.plans as |plan|}}
-    {{trips-list/plan plan=plan toggleImportant='togglePlanImportant'
-                                toggleStrict='togglePlanStrict'
-                                delete='deletePlan'}}
+    <div class="trip-plan">
+      {{trips-list/plan plan=plan toggleImportant='togglePlanImportant'
+                                  toggleStrict='togglePlanStrict'
+                                  delete='deletePlan'}}
+    </div>
   {{/each}}
-</ul>
+</div>
+
+<div class="col-md-5 trip-header">
+
+  <div class="trip-header-desktop">
+    <h2 >{{trip.location}}</h2>
+    <h3 >{{trip.who}}</h3>
+    <h3 >{{trip.more_info}}</h3>
+  </div>
+
+  <form>
+    {{input placeholder="Who's going? (ex \"Jim, Sally, Gunther\" or \"All\")"
+    class="input-group form-control"
+    value=newPlan.who}}
+
+    {{input placeholder="What are you doing?"
+    class="input-group form-control"
+    value=newPlan.what}}
+
+    {{input placeholder="Where?"
+    class="input-group form-control"
+    value=newPlan.location}}
+
+    {{textarea placeholder="More info?"
+    class="input-group form-control"
+    value=newPlan.more_details}}
+
+    {{input placeholder="Date"
+    class="input-group form-control"
+    value=newPlan.date
+    type="date"}}
+
+    {{input placeholder="Time"
+    class="input-group form-control"
+    value=newPlan.time
+    type="time"}}
+
+    <button type="submit" class="btn btn-primary" {{action "createPlan"}}>Create Plan</button>
+    <button class="btn btn-default" {{action "reset"}}>Cancel</button>
+
+  </form>
+</div>
 
 <br>
-
-<form>
-  {{input placeholder="Who's going? (ex \"Jim, Sally, Gunther\" or \"All\")"
-          class="input-group form-control"
-          value=newPlan.who}}
-
-  {{input placeholder="What are you doing?"
-          class="input-group form-control"
-          value=newPlan.what}}
-
-  {{input placeholder="Where?"
-          class="input-group form-control"
-          value=newPlan.location}}
-
-  {{textarea placeholder="More info?"
-          class="input-group form-control"
-          value=newPlan.more_details}}
-
-  {{input placeholder="Date"
-          class="input-group form-control"
-          value=newPlan.date
-          type="date"}}
-
-  {{input placeholder="Time"
-          class="input-group form-control"
-          value=newPlan.time
-          type="time"}}
-
-  <button type="submit" class="btn btn-primary" {{action "createPlan"}}>Create Plan</button>
-  <button class="btn btn-default" {{action "reset"}}>Cancel</button>
-
-</form>
-
 <br>
 
-{{#link-to 'trips'}}Back{{/link-to}}
+{{#link-to 'trips'}}<button class="btn btn-default">Back</button>{{/link-to}}

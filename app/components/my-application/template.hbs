@@ -1,36 +1,37 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    {{navbar-header}}
 
-    <div class="collapse navbar-collapse" id="navigation">
-      <ul class="nav navbar-nav">
-        {{#if isAuthenticated}}
-        {{!-- <li>{{#link-to "users"}}Users{{/link-to}}</li> --}}
-        <li>{{#link-to "trips"}}Trips{{/link-to}}</li>
-        {{!-- <li>{{#link-to "plans"}}Plans{{/link-to}}</li> --}}
-        {{/if}}
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        {{#if isAuthenticated}}
-        <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
-        <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
-        {{else}}
-        <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
-        <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
-        {{/if}}
-      </ul>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      {{navbar-header}}
+
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav">
+          {{#if isAuthenticated}}
+          <li>{{#link-to "trips"}}Trips{{/link-to}}</li>
+          {{/if}}
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          {{#if isAuthenticated}}
+          <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+          <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
+          {{else}}
+          <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
+          <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
+          {{/if}}
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<div class="app-title">
-<h1>Trip Planner App!</h1>
-</div>
+
+
+  <div class="app-title">
+    <h1>For Travellers</h1>
+  </div>
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
 {{/each}}
 
-<div class="col-md-8 col-md-offset-2">
+<div class="main col-md-12 text-center">
   {{outlet}}
 </div>

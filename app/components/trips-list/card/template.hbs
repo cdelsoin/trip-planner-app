@@ -1,16 +1,16 @@
-{{#link-to 'trip' trip}}
+<div class="trip-card col-lg-4 col-md-6 col-sm-12">
+  {{#link-to 'trip' trip}}
   <h3 class="trip-header">{{trip.location}}</h3>
-{{/link-to}}
+  {{/link-to}}
 
-<ul>
-  <li>{{trip.start_date}}</li>
-  <li>{{trip.end_date}}</li>
-  <li>{{trip.who}}</li>
-  <li>{{trip.more_info}}</li>
-</ul>
+  <p>{{trip.start_date}}</p>
+  <p>{{trip.end_date}}</p>
+  <p>{{trip.who}}</p>
+  <p>{{trip.more_info}}</p>
 
-<button class="btn btn-primary" {{action 'edit'}}>Edit</button>
-<button class="btn btn-danger" {{action 'delete'}}>Delete</button>
+  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 
-<br>
-<br>
+  <br>
+  <br>
+</div>
