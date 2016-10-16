@@ -17,11 +17,6 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-// body {
-//   // background-color: rgba(0, 0, 0, 0.15);
-//   // height: 100vh;
-// }
-
 .app-title {
   font-family: 'Homemade Apple', cursive;
   text-align: center;
@@ -33,16 +28,8 @@ h1 {
   margin-top: 5%;
 }
 
-.main {
-  // background-color: rgba(0, 0, 0, 0.15);
-}
-
-.trip-card {
+.back {
   color: white;
-}
-
-.trip-header {
-  margin-bottom: 3%;
 }
 
 @media (max-width: 600px) {
