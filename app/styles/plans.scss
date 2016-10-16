@@ -1,5 +1,11 @@
 .trip-header {
   color: white;
+  margin-top: 3%;
+}
+
+.trip-header-mobile {
+  color: white;
+  margin-bottom: 4%;
 }
 
 .plans-list {
@@ -14,10 +20,34 @@
   margin: 5%;
 }
 
+.back {
+  color: white;
+}
+
 .trip-plan-important {
   border: 5px solid red;
 }
 
 .trip-plan-strict {
   background-color: rgba(0, 128, 128, 0.6);
+}
+
+@media (max-width: 1000px) {
+  .plans-list {
+    // overflow: visible;
+  }
+
+  .trip-plan {
+    margin: 2%;;
+  }
+
+  .trip-header-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .trip-header-mobile {
+    display: none;
+  }
 }
