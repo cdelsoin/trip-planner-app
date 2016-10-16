@@ -1,18 +1,11 @@
-<span >
-  <div class="trip-plan">
-  {{!-- <div style="border: 1px dashed black"> --}}
-
-
-    {{!-- <ul> --}}
-      <p>{{plan.who}}</p>
-      <p>{{plan.what}}</p>
-      <p>{{plan.location}}</p>
-      <p>{{plan.date}}</p>
-      <p>{{plan.time}}</p>
-      <p>{{plan.more_details}}</p>
-      <p {{action 'toggleStrict'}}>time sensitive? {{plan.strict_time}}</p> {{!-- TODO create a button and move plan.strict_time into the action--}}
-      <p {{action 'toggleImportant'}}>must do? {{plan.important}}</p> {{!-- TODO create a button and move plan.important into the action--}}
-      <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete</button>
-    {{!-- </ul> --}}
-  </div>
-</span>
+<div class="trip-plan">
+  <p>{{plan.who}}</p>
+  <p>{{plan.what}}</p>
+  <p>{{plan.location}}</p>
+  <p>{{plan.date}}</p>
+  <p>{{plan.time}}</p>
+  <p>{{plan.more_details}}</p>
+  <p {{action 'toggleStrict'}}>time sensitive? {{plan.strict_time}}</p> {{!-- TODO create a button and move plan.strict_time into the action--}}
+  <p {{action 'toggleImportant'}}>must do? {{plan.important}}</p> {{!-- TODO create a button and move plan.important into the action--}}
+  <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete</button>
+</div>

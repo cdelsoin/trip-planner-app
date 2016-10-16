@@ -1,20 +1,18 @@
 <div class="trip-header">
-  <h3 >{{trip.location}}</h3>
-  <h4 >{{trip.who}}</h4>
-  <h4 >{{trip.more_info}}</h4>
+  <h2 >{{trip.location}}</h2>
+  <h3 >{{trip.who}}</h3>
+  <h3 >{{trip.more_info}}</h3>
 </div>
 
-<ul>
+<div class="col-md-8 col-md-offset-2">
   {{#each trip.plans as |plan|}}
     {{trips-list/plan plan=plan toggleImportant='togglePlanImportant'
                                 toggleStrict='togglePlanStrict'
                                 delete='deletePlan'}}
   {{/each}}
-</ul>
 
-<br>
+  <br>
 
-<div class="col-md-8 col-md-offset-2">
 
   <form>
     {{input placeholder="Who's going? (ex \"Jim, Sally, Gunther\" or \"All\")"
