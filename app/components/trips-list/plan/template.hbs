@@ -1,4 +1,4 @@
-<div class="trip-plan">
+{{!-- <div class="trip-plan">/\ --}}
   <p>{{plan.who}}</p>
   <p>{{plan.what}}</p>
   <p>{{plan.location}}</p>
@@ -8,4 +8,4 @@
   <p {{action 'toggleStrict'}}>time sensitive? {{plan.strict_time}}</p> {{!-- TODO create a button and move plan.strict_time into the action--}}
   <p {{action 'toggleImportant'}}>must do? {{plan.important}}</p> {{!-- TODO create a button and move plan.important into the action--}}
   <button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete</button>
-</div>
+{{!-- </div> --}}

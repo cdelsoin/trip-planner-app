@@ -1,18 +1,7 @@
-<div class="trip-header">
+<div class="col-md-5 trip-header">
   <h2 >{{trip.location}}</h2>
   <h3 >{{trip.who}}</h3>
   <h3 >{{trip.more_info}}</h3>
-</div>
-
-<div class="col-md-8 col-md-offset-2">
-  {{#each trip.plans as |plan|}}
-    {{trips-list/plan plan=plan toggleImportant='togglePlanImportant'
-                                toggleStrict='togglePlanStrict'
-                                delete='deletePlan'}}
-  {{/each}}
-
-  <br>
-
 
   <form>
     {{input placeholder="Who's going? (ex \"Jim, Sally, Gunther\" or \"All\")"
@@ -45,8 +34,20 @@
     <button class="btn btn-default" {{action "reset"}}>Cancel</button>
 
   </form>
+</div>
+
+
+<div class="plans-list col-md-7">
+  {{#each trip.plans as |plan|}}
+    <div class="trip-plan">
+      {{trips-list/plan plan=plan toggleImportant='togglePlanImportant'
+                                  toggleStrict='togglePlanStrict'
+                                  delete='deletePlan'}}
+    </div>
+  {{/each}}
+</div>
 
 <br>
+<br>
 
-{{#link-to 'trips'}}Back{{/link-to}}
-</div>
+{{#link-to 'trips'}}<h3>Back</h3>{{/link-to}}
