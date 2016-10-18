@@ -23,14 +23,14 @@
   </nav>
 
 
+  {{#each flashMessages.queue as |flash|}}
+  {{flash-message flash=flash}}
+  {{/each}}
 
   <div class="app-title">
     <h1>For Travellers</h1>
   </div>
 
-{{#each flashMessages.queue as |flash|}}
-  {{flash-message flash=flash}}
-{{/each}}
 
 <div class="col-md-12 text-center">
   {{outlet}}

@@ -1,28 +1,30 @@
-{{!-- <form {{action 'save' on='submit' }}> --}}
-<form>
-  {{input placeholder='Destination'
-          class='input-group form-control'
-          value=trip.location}}
+<div class="col-md-6 col-md-offset-3">
 
-  {{input placeholder='When will you arrive?'
-          class='input-group form-control'
-          value=trip.start_date
-          type='date'}}
+  <form>
+    {{input placeholder='Destination'
+            class='input-group form-control'
+            value=trip.location}}
 
-  {{input placeholder='When will you leave?'
-          class='input-group form-control'
-          value=trip.end_date
-          type='date'}}
+    {{input placeholder='When will you arrive?'
+            class='input-group form-control'
+            value=trip.start_date
+            type='date'}}
 
-  {{input placeholder='Who is going?'
-          class='input-group form-control'
-          value=trip.who}}
+    {{input placeholder='When will you leave?'
+            class='input-group form-control'
+            value=trip.end_date
+            type='date'}}
 
-  {{textarea placeholder="More info?"
-          class="input-group form-control"
-          value=trip.more_info}}
+    {{input placeholder='Who is going?'
+            class='input-group form-control'
+            value=trip.who}}
 
-  <button type="submit" class="btn btn-primary" {{action "save"}}>Create Plan</button>
-  <button {{action 'cancel'}} class="btn btn-default">Cancel</button>
+    {{textarea placeholder="More info?"
+            class="input-group form-control"
+            value=trip.more_info}}
 
-</form>
+    <button type="submit" class="btn btn-primary" {{action "save"}}>Create Trip</button>
+    <button {{action 'cancel'}} class="btn btn-default">Cancel</button>
+
+  </form>
+</div>
