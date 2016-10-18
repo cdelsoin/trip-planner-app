@@ -44,10 +44,9 @@
     value=newPlan.date
     type="date"}}
 
-    {{input placeholder="Time"
+    {{input placeholder="Time ex (7:30 PM or Noonish)"
     class="input-group form-control"
-    value=newPlan.time
-    type="time"}}
+    value=newPlan.time}}
 
     <button type="submit" class="btn btn-primary" {{action "createPlan"}}>Create Plan</button>
     <button class="btn btn-default" {{action "reset"}}>Cancel</button>

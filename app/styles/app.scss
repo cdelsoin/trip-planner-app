@@ -10,6 +10,7 @@
 body {
   background-attachment: fixed;
   background-color: rgba(68, 124, 147, 1);
+  color: white;
   // background-image: url('http://i.imgur.com/LhNbtak.jpg');
   // background-image: url('http://i.imgur.com/46lkfaP.jpg');
   background-repeat: no-repeat;
@@ -41,6 +42,12 @@ h1 {
 
 .back {
   color: white;
+}
+
+.example {
+  color: rgb(187, 47, 47);
+  background-color: rgb(236, 236, 236);
+  border: 3px solid rgb(187, 47, 47);
 }
 
 @media (max-width: 600px) {

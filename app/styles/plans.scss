@@ -11,6 +11,9 @@
 .plans-list {
   overflow: auto;
   height: 65vh;
+  border-radius: 35%;
+  border: 8px solid rgba(109, 168, 193, 1);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .trip-plan {

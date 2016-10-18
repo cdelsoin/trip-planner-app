@@ -6,7 +6,8 @@
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
           {{#if isAuthenticated}}
-          <li>{{#link-to "trips"}}Trips{{/link-to}}</li>
+          <li>{{#link-to "trips"}}My Trips{{/link-to}}</li>
+          <li>{{#link-to "trips.new"}}Create a Trip{{/link-to}}</li>
           {{/if}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
