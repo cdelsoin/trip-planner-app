@@ -25,8 +25,8 @@ export default Ember.Route.extend({
       return plan.destroyRecord();
     },
 
-    saveTrip(trip) {
-      trip.save()
+    saveTrip(data) {
+      data.trip.save()
       .then(()=>this.transitionTo('trips'));
     },
 

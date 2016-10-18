@@ -17,9 +17,18 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+.container-fluid {
+  padding: 0px !important;
+}
+
 .app-title {
   font-family: 'Homemade Apple', cursive;
   text-align: center;
+}
+
+nav {
+  border-radius: 0px !important;
+  padding: 1px;
 }
 
 h1 {
